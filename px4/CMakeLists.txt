@@ -5,7 +5,7 @@ find_package(ament_cmake REQUIRED)
 
 include(ExternalProject)
 
-set(PX4_TARGET all)
+set(PX4_TARGET px4_sitl_default)
 
 set(firmware_path "${CMAKE_CURRENT_SOURCE_DIR}/Firmware")
 ExternalProject_Add(firmware
