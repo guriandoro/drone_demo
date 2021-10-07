@@ -14,9 +14,9 @@ ExternalProject_Add(firmware
   # UPDATE_COMMAND "${firmware_path}/Tools/check_submodules.sh"
   # SOURCE_DIR "${firmware_path}/Tools/sitl_gazebo"
   CMAKE_ARGS "-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}"
-  INSTALL_COMMAND rsync -avL --exclude .git --exclude build . build/${PX4_TARGET}/bin ${CMAKE_INSTALL_PREFIX}/share/px4
+  INSTALL_COMMAND rsync -avL --exclude .git --exclude build . build/px4_sitl_default/bin ${CMAKE_INSTALL_PREFIX}/share/px4
   CONFIGURE_COMMAND ""
-  BUILD_COMMAND make ${PX4_TARGET}
+  BUILD_COMMAND make px4_sitl_default
   BUILD_IN_SOURCE ON
 )
 
